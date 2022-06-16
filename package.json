@@ -1,18 +1,22 @@
 {
   "name": "@tornado3708/mathplus",
   "version": "1.0.0",
-  "author": "Tornado3708 <sami.vagebi@gmail.com>",
-  "description": "Better Math",
-  "main": "./src/index.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
     "test": "node src/test.js"
   },
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Tornado3708/MathPlus.git"
+    "url": "git+https://github.com/Tornado3708/MathPlus.git"
   },
+  "keywords": [
+    "mathplus",
+    "vector",
+    "matrix"
+  ],
+  "author": "Tornado3708 <sami.vagebi@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tornado3708/MathPlus/issues"
   },
