@@ -1,6 +1,6 @@
 {
   "name": "@tornado3708/mathplus",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "author": "Tornado3708 <sami.vagebi@gmail.com>",
   "description": "Better Math",
   "main": "./src/index.js",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Tornado3708/MathPlus.git"
+    "url": "git+http://github.com/Tornado3708/MathPlus.git"
   },
   "bugs": {
     "url": "https://github.com/Tornado3708/MathPlus/issues"
