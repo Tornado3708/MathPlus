@@ -8,5 +8,13 @@
     "start": "node src/index.js",
     "test": "node src/test.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Tornado3708/MathPlus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tornado3708/MathPlus/issues"
+  },
+  "homepage": "https://github.com/Tornado3708/MathPlus#readme"
 }
