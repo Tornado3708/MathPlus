@@ -1,6 +1,6 @@
 const cycloid = {
-    x : (radian ,r=1) => { return  (radian - Math.sin(radian)) * r; },
-    y : (radian ,r=1) => { return (1 - Math.cos(radian)) * r; }
+    x:(radian ,r=1)=>{return(radian-Math.sin(radian))*r;},
+    y:(radian ,r=1)=>{return(1-Math.cos(radian))*r;}
 };
 
 
@@ -12,21 +12,14 @@ const toRadians    = (angle=0)   =>{ return Math.RAD_DEG * angle;   };
 const toAngle      = (radians=0) =>{ return Math.DEG_RAD * radians; };
 
 
-const matrix2d     = (w,h,r=1,tx=0,ty=0) =>{
-    let d = Math.sqrt(w*w+h*h) || 0;
-    return {
-        x : w / d * r + tx || tx, y : h / d * r + ty || ty
-    };
+const matrix2d     =(w,h,r=1,tx=0,ty=0)=>{let d=Math.sqrt(w*w+h*h)||0;
+    return{x:w/d*r+tx||tx,y:h/d*r+ty||ty};
 };
 
 
-const matrix3d   = (w,h,l,r=1,tx=0,ty=0,tz=0) =>{
-    let d = Math.sqrt(w*w+h*h+l*l) || 0;
-    return {
-        x : w / d * r + tx || tx,
-        y : h / d * r + ty || ty,
-        z : l / d * r + tz || tz
-    };
+const matrix3d   = (w,h,l,r=1,tx=0,ty=0,tz=0)=>{
+    let d=Math.sqrt(w*w+h*h+l*l)||0;
+    return{x:w/d*r+tx||yx,y:h/d*r+ty||ty,z:l/d*r+tz||tz};
 };
 
 
