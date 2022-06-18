@@ -62,20 +62,15 @@ module.exports = {
     Matrix,
     
     cycloid,
-    
     cosec,sec,
     sinc,cosc,
     toRadians,toAngle,
     matrix2d,matrix3d,
     
     PI_TWO,TAU,
-    PI_HALF,
-    PI_QUARTER,
-    RAD2DEG,
-    DEG2RAD,
-    SQRT3,
-    SQRT5,
-    FI,
-    fi
+    PI_HALF,PI_QUARTER,
+    RAD2DEG,DEG2RAD,
+    SQRT3,SQRT5,
+    FI,fi
     
 };
