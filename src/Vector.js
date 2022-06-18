@@ -92,7 +92,6 @@ module.exports=class Vector{
         
         this.__proto__.length=()=>{return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);//Магнітуда ,довжина
     };
-        
     }
 };
 
