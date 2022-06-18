@@ -27,6 +27,7 @@ const FI         = other.FI;
 const fi         = other.fi;
 
 const install = () =>{
+    
     Math.cycloid    = cycloid;
     Math.cosec      = cosec;
     Math.sec        = sec;

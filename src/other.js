@@ -15,8 +15,7 @@ const toAngle      = (radians=0) =>{ return Math.DEG_RAD * radians; };
 const matrix2d     = (w,h,r=1,tx=0,ty=0) =>{
     let d = Math.sqrt(w*w+h*h) || 0;
     return {
-        x : w / d * r + tx || tx,
-        y : h / d * r + ty || ty
+        x : w / d * r + tx || tx, y : h / d * r + ty || ty
     };
 };
 
@@ -40,6 +39,7 @@ const SQRT3        = 1.7320508075688772;
 const SQRT5        = 2.23606797749979;
 const FI           = 1.618033988749895;
 const fi           = 0.618033988749895;
+
 
 module.exports = {
     cycloid,
