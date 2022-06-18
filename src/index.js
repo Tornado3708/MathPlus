@@ -26,6 +26,9 @@ const SQRT5      = other.SQRT5;
 const FI         = other.FI;
 const fi         = other.fi;
 
+
+
+
 const install = () =>{
     
     Math.cycloid    = cycloid;
@@ -59,16 +62,13 @@ module.exports = {
     Matrix,
     
     cycloid,
-    cosec,
-    sec,
-    sinc,
-    cosc,
-    toRadians,
-    toAngle,
-    matrix2d,
-    matrix3d,
-    PI_TWO,
-    TAU,
+    
+    cosec,sec,
+    sinc,cosc,
+    toRadians,toAngle,
+    matrix2d,matrix3d,
+    
+    PI_TWO,TAU,
     PI_HALF,
     PI_QUARTER,
     RAD2DEG,

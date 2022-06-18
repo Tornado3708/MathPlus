@@ -11,24 +11,24 @@ module.exports = class Vector{
     
     
     static dotProduct(vec_a,vec_b){  
-        let x = vec_a.x * vec_b.x || 0;
-        let y = vec_a.y * vec_b.y || 0;
-        let z = vec_a.z * vec_b.z || 0;
-        return  x + y + z;
+        let x = vec_a.x*vec_b.x||0;
+        let y = vec_a.y*vec_b.y||0;
+        let z = vec_a.z*vec_b.z||0;
+        return  x+y+z;
     };
     
     
-    static crossProduct(vec_a,vec_b){ return {
-            x : (vec_a.y * vec_b.z) - (vec_a.z * vec_b.y),
-            y : (vec_a.z * vec_b.x) - (vec_a.x * vec_b.z),
-            z : (vec_a.x * vec_b.y) - (vec_a.y * vec_b.x)
+    static crossProduct(vec_a,vec_b){return{
+            x : (vec_a.y*vec_b.z)-(vec_a.z*vec_b.y),
+            y : (vec_a.z*vec_b.x)-(vec_a.x*vec_b.z),
+            z : (vec_a.x*vec_b.y)-(vec_a.y*vec_b.x)
         };
     };
     
     
     static normal(vec){//toReDo
         let length = vec.length();
-        return {x:vec.x*(1/length),y:vec.y*(1/length),z:vec.z*(1/length)};
+        return{x:vec.x*(1/length),y:vec.y*(1/length),z:vec.z*(1/length)};
     };
     
     
@@ -36,55 +36,43 @@ module.exports = class Vector{
     static angle = {//test
         
         xy : (vec_a,vec_b) => {
-            let x = vec_a.x * vec_b.x;
-            let y = vec_a.y * vec_b.y;
-            let xy = x + y;
-            let length = 
-                Math.sqrt(vec_a.x * vec_a.x + vec_a.y * vec_a.y) *
-                Math.sqrt(vec_b.x * vec_b.x + vec_b.y * vec_b.y);
-            return xy * (1 / length) || 0;
+            let x = vec_a.x*vec_b.x;
+            let y = vec_a.y*vec_b.y;
+            let length = Math.sqrt(vec_a.x*vec_a.x+vec_a.y*vec_a.y)*Math.sqrt(vec_b.x*vec_b.x+vec_b.y*vec_b.y);
+            return (x+y)*(1/length)||0;
         },
         
         xz : (vec_a,vec_b) => {
-            let x = vec_a.x * vec_b.x;
-            let z = vec_a.z * vec_b.z;
-            let xz = x + z;
-            let length = 
-                Math.sqrt(vec_a.x * vec_a.x + vec_a.z * vec_a.z) *
-                Math.sqrt(vec_b.x * vec_b.x + vec_b.z * vec_b.z);
-            return xz * (1 / length) || 0;
+            let x = vec_a.x*vec_b.x;
+            let z = vec_a.z*vec_b.z;
+            let length = Math.sqrt(vec_a.x*vec_a.x+vec_a.z*vec_a.z)*Math.sqrt(vec_b.x*vec_b.x+vec_b.z*vec_b.z);
+            return (x+z)*(1/length)||0;
         },
         
         yz : (vec_a,vec_b) => {
-            let y = vec_a.y * vec_b.y;
-            let z = vec_a.z * vec_b.z;
-            let yz = y + z;
-            let length = 
-                Math.sqrt(vec_a.y * vec_a.y + vec_a.z * vec_a.z) *
-                Math.sqrt(vec_b.y * vec_b.y + vec_b.z * vec_b.z);
-            return yz * (1 / length) || 0;
+            let y = vec_a.y*vec_b.y;
+            let z = vec_a.z*vec_b.z;
+            let length = Math.sqrt(vec_a.y*vec_a.y+vec_a.z*vec_a.z)*Math.sqrt(vec_b.y*vec_b.y+vec_b.z*vec_b.z);
+            return (y+z)*(1/length)||0;
         },
         
         xyz : (vec_a,vec_b) => {
-            let x = vec_a.x * vec_b.x;
-            let y = vec_a.y * vec_b.y;
-            let z = vec_a.z * vec_b.z;
-            let xyz = x + y + z;
-            let length = 
-                Math.sqrt(vec_a.x * vec_a.x + vec_a.y * vec_a.y + vec_a.z * vec_a.z) *
-                Math.sqrt(vec_b.x * vec_b.x + vec_b.y * vec_b.y + vec_b.z * vec_b.z);
-            return xyz * (1 / length) || 0;
+            let x = vec_a.x*vec_b.x;
+            let y = vec_a.y*vec_b.y;
+            let z = vec_a.z*vec_b.z;
+            let length = Math.sqrt(vec_a.x*vec_a.x+vec_a.y*vec_a.y+vec_a.z*vec_a.z)*Math.sqrt(vec_b.x*vec_b.x+vec_b.y*vec_b.y+vec_b.z*vec_b.z);
+            return (x+y+z)*(1/length)||0;
         }
     };
     
     
     constructor(...x_y_z){
         
-        this.x = x_y_z[0]["x"] || x_y_z[0][0] || x_y_z[0] || 0;
-        this.y = x_y_z[0]["y"] || x_y_z[0][1] || x_y_z[1] || 0;
-        this.z = x_y_z[0]["z"] || x_y_z[0][2] || x_y_z[2] || 0;
+        this.x = x_y_z[0]["x"]||x_y_z[0][0]||x_y_z[0]||0;
+        this.y = x_y_z[0]["y"]||x_y_z[0][1]||x_y_z[1]||0;
+        this.z = x_y_z[0]["z"]||x_y_z[0][2]||x_y_z[2]||0;
         
-        this.__proto__.add = (x=0,y=0,z=0) =>{ this.x += x; this.y += y; this.z += z; };
+        this.__proto__.add = (x=0,y=0,z=0) =>{ this.x+=x; this.y+=y; this.z+=z; };
         
         this.add.x = (x=0) =>{ this.x += x;};
         this.add.y = (y=0) =>{ this.y += y;};
