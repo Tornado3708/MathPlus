@@ -78,7 +78,7 @@ module.exports=class Vector{
         this.mult.y=(m=1)=>{this.y*=m;};
         this.mult.z=(m=1)=>{this.z*=m;};
         
-        this.__proto__.div=(d=1)=>{this.x*=1/d;this.y*=1/d;this.z/=d;};
+        this.__proto__.div=(d=1)=>{this.x*=1/d;this.y*=1/d;this.z*=1/d;};
         this.div.x=(d=1)=>{this.x*=1/d;};
         this.div.y=(d=1)=>{this.y*=1/d;};
         this.div.z=(d=1)=>{this.z*=1/d;};
