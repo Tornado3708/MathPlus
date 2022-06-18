@@ -26,9 +26,32 @@ const SQRT5      = other.SQRT5;
 const FI         = other.FI;
 const fi         = other.fi;
 
-
+const install = () =>{
+    Math.cycloid    = cycloid;
+    Math.cosec      = cosec;
+    Math.sec        = sec;
+    Math.sinc       = sinc;
+    Math.cosc       = cosc;
+    Math.toRadians  = toRadians;
+    Math.toAngle    = toAngle;
+    Math.matrix2d   = matrix2d;
+    Math.matrix3d   = matrix3d;
+    
+    Math.PI_TWO     = PI_TWO;
+    Math.TAU        = TAU;
+    Math.PI_HALF    = PI_HALF;
+    Math.PI_QUARTER = PI_QUARTER;
+    Math.RAD2DEG    = RAD2DEG;
+    Math.DEG2RAD    = DEG2RAD;
+    Math.SQRT3      = SQRT3;
+    Math.SQRT5      = SQRT5;
+    Math.FI         = FI;
+    Math.fi         = fi;
+};
 
 module.exports = {
+    
+    install,
     
     Dot,
     Vector,
