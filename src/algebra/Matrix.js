@@ -4,8 +4,10 @@ module.exports = class Matrix{
     };
     
     constructor(array){
+        this.__proto__.length = 0;
+        
         for(let x = 0;x < array.length;x++){
-            this[x] = array[x];
+            this[x] = [];
             for(let y = 0;y < array[0].length;y++){
                 this[x][y] = array[x][y];
             }
@@ -18,25 +20,24 @@ module.exports = class Matrix{
             let rows = this.length;
             let cols = this[0].length;
             
-            for(let y = 0;y < rows;y++){
-                temp[y] = [];
-                for(let x = 0;x < cols;x++){
-                    temp[y][x] = this[y][x];
+            for(let x = 0;x < rows;x++){
+                temp[x] = [];
+                for(let y = 0;y < cols;y++){
+                    temp[x][y] = this[x][y];
                 }
             }
-            
-            for(let y = 0;y < rows;y++){
-                delete this[y];
-                this.__proto__.length = 0;
+            for(let i = 0;i < this.length;i++){
+                delete this[i];
             }
-            
-            for(let y = 0;y < cols;y++){
-                this[y] = [];
-                for(let x = 0;x < rows;x++){
-                    this[y][x] = temp[x][y];
+            let length = 0;
+            for(let x = 0;x < cols;x++){
+                this[x] = [];
+                for(let y = 0;y < rows;y++){
+                    this[x][y] = temp[y][x];
                 }
+                length = x+1;
             }
-            this.__proto__.length = temp[0].length;
+            this.__proto__.length = length;
         };
     }
 };
