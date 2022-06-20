@@ -4,12 +4,12 @@ const cycloid = {
 };
 
 
-const cosec        = (x=0)       =>{ return 1/Math.sin(x)   || 0;   };
-const sec          = (x=0)       =>{ return 1/Math.cos(x)   || 0;   };
-const sinc         = (x=0)       =>{ return (Math.sin(x)/x) || 0;   };
-const cosc         = (x=0)       =>{ return (Math.cos(x)/x) || 0;   };
-const toRadians    = (angle=0)   =>{ return Math.RAD_DEG * angle;   };
-const toAngle      = (radians=0) =>{ return Math.DEG_RAD * radians; };
+const cosec        = (x=0)      =>{ return 1/Math.sin(x)   || 0;   };
+const sec          = (x=0)      =>{ return 1/Math.cos(x)   || 0;   };
+const sinc         = (x=0)      =>{ return (Math.sin(x)/x) || 0;   };
+const cosc         = (x=0)      =>{ return (Math.cos(x)/x) || 0;   };
+const toRadians    = (angle=0)  =>{ return Math.RAD_DEG * angle;   };
+const toAngle      = (radians=0)=>{ return Math.DEG_RAD * radians; };
 
 
 const matrix2d     =(w,h,r=1,tx=0,ty=0)=>{let d=Math.sqrt(w*w+h*h)||0;

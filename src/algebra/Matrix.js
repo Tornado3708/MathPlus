@@ -1,6 +1,6 @@
 class Matrix{
     
-    static transpose = (array) =>{//toDo
+    static transpose(array){//toDo
         let output = [];
         let rows = array.length;
         let cols = array[0].length;
@@ -19,13 +19,16 @@ class Matrix{
         for(let x = 0;x < array.length;x++){
             this[x] = [];
             for(let y = 0;y < array[0].length;y++){
-                this[x][y] = array[x][y];
-            }
+                this[x][y] = array[x][y];}
             this.__proto__.length = x+1;
         }
         
+        this.__proto__.add  = (matrix)=>{/*toDO*/};
+        this.__proto__.sub  = (matrix)=>{/*toDO*/};
+        this.__proto__.mult = (matrix)=>{/*toDO*/};
+        this.__proto__.div  = (matrix)=>{/*toDO*/};
+        
         this.__proto__.transpose = () =>{
-            
             let temp = [];
             let rows = this.length;
             let cols = this[0].length;
@@ -36,7 +39,7 @@ class Matrix{
                     temp[x][y] = this[x][y];
                 }
             }
-            for(let i = 0;i < this.length;i++){ delete this[i];}
+            for(let i = 0;i < this.length;i++){delete this[i];}
             
             for(let x = 0;x < cols;x++){
                 this[x] = [];

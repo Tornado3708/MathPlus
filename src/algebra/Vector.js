@@ -8,12 +8,7 @@ class Vector{
     static RIGHT ={x:1,y:0,z:0};
     static UP    ={x:0,y:1,z:0};
     
-    static dotProduct(vec_a,vec_b){  
-        let x=vec_a.x*vec_b.x||0;
-        let y=vec_a.y*vec_b.y||0;
-        let z=vec_a.z*vec_b.z||0;
-        return x+y+z;
-    };
+    static dotProduct(vec_a,vec_b){let x=vec_a.x*vec_b.x||0;let y=vec_a.y*vec_b.y||0;let z=vec_a.z*vec_b.z||0;return x+y+z;};
     
     static crossProduct(vec_a,vec_b){return{
             x:(vec_a.y*vec_b.z)-(vec_a.z*vec_b.y),
@@ -21,7 +16,7 @@ class Vector{
             z:(vec_a.x*vec_b.y)-(vec_a.y*vec_b.x)};
     };
     
-    static normal(vec){//toReDo
+    static unitVector(vec){//toReDo
         let length=vec.length();
         return{x:vec.x*(1/length),y:vec.y*(1/length),z:vec.z*(1/length)};
     };
@@ -83,14 +78,10 @@ this.div.y=(d=1)=>{this.y*=1/d;};
 this.div.z=(d=1)=>{this.z*=1/d;};
 
 this.__proto__.direction=()=>{let d=Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);return{x:this.x/d||0,y:this.y/d||0,z:this.z/d||0};};
-this.direction().__proto__.div=(d=1)=>{return{x:this.x*(1/d),y:this.y*(1/d),z:this.z*(1/d)};};
+this.direction().__proto__.div=function(d=1){
+        return{x:1/d*this.x||0,y:1/d*this.y||0,z:1/d*this.z||0};};
 this.direction().__proto__.mult   = function(m=1){
-            
-            return {
-                x : this.x*m || 0,
-                y : this.y*m || 0,
-                z : this.z*m || 0
-            };
+            return{x:this.x*m||0,y:this.y*m||0,z:this.z*m||0};
         };
         
 this.__proto__.length=()=>{return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);};
