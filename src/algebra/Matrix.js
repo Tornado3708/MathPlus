@@ -1,6 +1,16 @@
-module.exports = class Matrix{
+class Matrix{
     
     static transpose = (array) =>{//toDo
+        let output = [];
+        let rows = array.length;
+        let cols = array[0].length;
+        for(let x = 0;x < cols;x++){
+            output[x] = [];
+            for(let y = 0;y < rows;y++){
+                output[x][y] = array[y][x];
+            }
+        }
+        return output;
     };
     
     constructor(array){
@@ -26,18 +36,17 @@ module.exports = class Matrix{
                     temp[x][y] = this[x][y];
                 }
             }
-            for(let i = 0;i < this.length;i++){
-                delete this[i];
-            }
-            let length = 0;
+            for(let i = 0;i < this.length;i++){ delete this[i];}
+            
             for(let x = 0;x < cols;x++){
                 this[x] = [];
                 for(let y = 0;y < rows;y++){
                     this[x][y] = temp[y][x];
                 }
-                length = x+1;
             }
-            this.__proto__.length = length;
+            this.__proto__.length = cols;
         };
     }
 };
+
+module.exports = Matrix;
