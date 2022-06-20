@@ -1,6 +1,6 @@
-const Dot    = require("./Dot.js");
-const Vector = require("./Vector.js");
-const Matrix = require("./Matrix.js");
+const Dot    = require("./geometry/Dot.js");
+const Vector = require("./algebra/Vector.js");
+const Matrix = require("./algebra/Matrix.js");
 const other  = require("./other.js");
 
 

@@ -1,5 +1,4 @@
-module.exports=class Vector{
-    
+class Vector{
     static ZERO={x:0,y:0,z:0};
     
     static BACK  ={x:0,y:0,z:-1};
@@ -58,40 +57,43 @@ module.exports=class Vector{
     
     
     constructor(...x_y_z){
-        
-        this.x = x_y_z[0]["x"]||x_y_z[0][0]||x_y_z[0]||0;
-        this.y = x_y_z[0]["y"]||x_y_z[0][1]||x_y_z[1]||0;
-        this.z = x_y_z[0]["z"]||x_y_z[0][2]||x_y_z[2]||0;
-        
-        this.__proto__.add=(x=0,y=0,z=0)=>{this.x+=x;this.y+=y;this.z+=z;};
-        this.add.x=(x=0)=>{this.x+=x;};
-        this.add.y=(y=0)=>{this.y+=y;};
-        this.add.z=(z=0)=>{this.z+=z;};
-        
-        this.__proto__.sub=(x=0,y=0,z=0)=>{this.x-=x;this.y-=y;this.z-=z;};
-        this.sub.x=(x=0)=>{this.x-=x;};
-        this.sub.y=(y=0)=>{this.y-=y;};
-        this.sub.z=(z=0)=>{this.z-=z;};
-        
-        this.__proto__.mult=(m=1)=>{this.x*=m;this.y*=m;this.z*=m;};
-        this.mult.x=(m=1)=>{this.x*=m;};
-        this.mult.y=(m=1)=>{this.y*=m;};
-        this.mult.z=(m=1)=>{this.z*=m;};
-        
-        this.__proto__.div=(d=1)=>{this.x*=1/d;this.y*=1/d;this.z*=1/d;};
-        this.div.x=(d=1)=>{this.x*=1/d;};
-        this.div.y=(d=1)=>{this.y*=1/d;};
-        this.div.z=(d=1)=>{this.z*=1/d;};
+        this.x = x_y_z[0]["x"] || x_y_z[0][0] || x_y_z[0] || 0;
+        this.y = x_y_z[0]["y"] || x_y_z[0][1] || x_y_z[1] || 0;
+        this.z = x_y_z[0]["z"] || x_y_z[0][2] || x_y_z[2] || 0;
+    
 
-        this.__proto__.direction=()=>{let d=Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);
-            return {x:this.x/d||0,y:this.y/d||0,z:this.z/d||0};
+this.__proto__.add=(x=0,y=0,z=0)=>{this.x += x; this.y += y;this.z += z;};
+this.add.x=(x=0)=>{this.x+=x;};
+this.add.y=(y=0)=>{this.y+=y;};
+this.add.z=(z=0)=>{this.z+=z;};
+
+this.__proto__.sub=(x=0,y=0,z=0)=>{this.x-=x;this.y-=y;this.z-=z;};
+this.sub.x=(x=0)=>{this.x-=x;};
+this.sub.y=(y=0)=>{this.y-=y;};
+this.sub.z=(z=0)=>{this.z-=z;};
+        
+this.__proto__.mult=(m=1)=>{this.x*=m;this.y*=m;this.z*=m;};
+this.mult.x=(m=1)=>{this.x*=m;};
+this.mult.y=(m=1)=>{this.y*=m;};
+this.mult.z=(m=1)=>{this.z*=m;};
+        
+this.__proto__.div=(d=1)=>{this.x*=1/d;this.y*=1/d;this.z*=1/d;};
+this.div.x=(d=1)=>{this.x*=1/d;};
+this.div.y=(d=1)=>{this.y*=1/d;};
+this.div.z=(d=1)=>{this.z*=1/d;};
+
+this.__proto__.direction=()=>{let d=Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);return{x:this.x/d||0,y:this.y/d||0,z:this.z/d||0};};
+this.direction().__proto__.div=(d=1)=>{return{x:this.x*(1/d),y:this.y*(1/d),z:this.z*(1/d)};};
+this.direction().__proto__.mult   = function(m=1){
+            
+            return {
+                x : this.x*m || 0,
+                y : this.y*m || 0,
+                z : this.z*m || 0
+            };
         };
         
-        this.direction().__proto__.div=(d=1)=>{return{x:this.x*(1/d),y:this.y*(1/d),z:this.z*(1/d)};};
-        this.direction().__proto__.mult=(m=1)=>{return{x:this.x*m||0,y:this.y*m||0,z:this.z*m||0};};
-        
-        this.__proto__.length=()=>{return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);//Магнітуда ,довжина
-    };
-    }
-};
+this.__proto__.length=()=>{return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);};
+}};
 
+module.exports = Vector;
