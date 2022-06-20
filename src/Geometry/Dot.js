@@ -1,9 +1,9 @@
 module.exports = class Dot{
     
     static distance(dot_a,dot_b){
-        let x = dot_a.x - dot_b.x;
-        let y = dot_a.y - dot_b.y;
-        let z = dot_a.z - dot_b.z;
+        let x = dot_a.x-dot_b.x;
+        let y = dot_a.y-dot_b.y;
+        let z = dot_a.z-dot_b.z;
         return Math.sqrt(x*x+y*y+z*z);
     };
     
