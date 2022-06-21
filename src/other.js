@@ -52,6 +52,6 @@ module.exports = {
     DEG2RAD,
     SQRT3,
     SQRT5,
-    FI,
-    fi
+    PHI,
+    phi
 };

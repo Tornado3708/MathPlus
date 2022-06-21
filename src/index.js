@@ -1,4 +1,4 @@
-//const Complex     = require("./algebra/Comlex.js");
+const Complex     = require("./algebra/Complex.js");
 const Dot2D       = require("./geometry/Dot2D.js");
 const Dot3D       = require("./geometry/Dot3D.js");
 const Line2D      = require("./geometry/Line2D.js");
@@ -31,8 +31,8 @@ const RAD2DEG    = other.RAD2DEG;
 const DEG2RAD    = other.DEG2RAD;
 const SQRT3      = other.SQRT3;
 const SQRT5      = other.SQRT5;
-const FI         = other.FI;
-const fi         = other.fi;
+const PHI        = other.PHI;
+const phi        = other.phi;
 
 
 
@@ -57,14 +57,15 @@ const install = () =>{
     Math.DEG2RAD    = DEG2RAD;
     Math.SQRT3      = SQRT3;
     Math.SQRT5      = SQRT5;
-    Math.FI         = FI;
-    Math.fi         = fi;
+    Math.PHI        = PHI;
+    Math.phi        = phi;
 };
 
 module.exports = {
     
     install,
     
+    Complex,
     Dot2D,
     Dot3D,
     Line2D,
@@ -85,6 +86,6 @@ module.exports = {
     PI_HALF,PI_QUARTER,
     RAD2DEG,DEG2RAD,
     SQRT3,SQRT5,
-    FI,fi
+    PHI,phi
     
 };
