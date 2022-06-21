@@ -1,4 +1,4 @@
-class Vector{
+class Vector3D{
   static ZERO={x:0,y:0,z:0};
 
   static BACK  ={x:0,y:0,z:-1};
@@ -86,4 +86,4 @@ class Vector{
       this.__proto__.length=()=>{return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);};
 }};
 
-module.exports = Vector;
+module.exports = Vector3D;
