@@ -1,17 +1,17 @@
 class Matrix{
     
-    static transpose(array){//toDo
-        let output = [];
-        let rows = array.length;
-        let cols = array[0].length;
-        for(let x = 0;x < cols;x++){
-            output[x] = [];
-            for(let y = 0;y < rows;y++){
-                output[x][y] = array[y][x];
-            }
-        }
-        return output;
-    };
+  static transpose(array){
+    let output = [];
+    let rows = array.length;
+    let cols = array[0].length;
+    for(let x = 0;x < cols;x++){
+      output[x] = [];
+      for(let y = 0;y < rows;y++){
+        output[x][y] = array[y][x];
+      }
+    }
+    return output;
+  };
     
     constructor(array){
         this.__proto__.length = 0;
@@ -23,10 +23,37 @@ class Matrix{
             this.__proto__.length = x+1;
         }
         
-        this.__proto__.add  = (matrix)=>{/*toDO*/};
-        this.__proto__.sub  = (matrix)=>{/*toDO*/};
-        this.__proto__.mult = (matrix)=>{/*toDO*/};
-        this.__proto__.div  = (matrix)=>{/*toDO*/};
+        this.__proto__.add  = function(number_or_matrix){
+          let arg = number_or_matrix;
+          if(arg instanceof Matrix || arg instanceof Array){
+            if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
+              for(let i = 0;i < this.length;i++){
+                for(let j = 0;j < this[0].length;j++){
+                  this[i][j]+=arg[i][j];
+                }
+              }
+            }
+          }else if(typeof arg === "number"){
+            for(let i = 0;i < this.length;i++){
+              for(let j = 0;j < this[0].length;j++){
+                this[i][j]+=arg;
+              }
+            }
+              
+          }
+        };
+        
+        this.__proto__.sub  = (number_or_matrix)=>{
+          let arg = number_or_matrix;
+        };
+        
+        this.__proto__.mult = (number_or_matrix)=>{
+        let arg = number_or_matrix;
+        };
+        
+        this.__proto__.div  = (number_or_matrix)=>{
+        let arg = number_or_matrix;
+        };
         
         this.__proto__.transpose = () =>{
             let temp = [];
