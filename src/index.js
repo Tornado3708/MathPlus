@@ -1,4 +1,8 @@
-const Dot    = require("./geometry/Dot.js");
+//const Tensor = require("./algebra/Tensor.js");
+//const Complex = require("./algebra/Comlex.js");
+
+const Dot2D    = require("./geometry/Dot2D.js");
+const Dot3D    = require("./geometry/Dot3D.js");
 const Vector = require("./algebra/Vector.js");
 const Matrix = require("./algebra/Matrix.js");
 const other  = require("./other.js");
@@ -57,7 +61,7 @@ module.exports = {
     
     install,
     
-    Dot,
+    Dot2D,Dot3D,
     Vector,
     Matrix,
     
