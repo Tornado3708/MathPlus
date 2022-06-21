@@ -4,14 +4,14 @@ class Line3D{
     return Math.sqrt(x*x+y*y+z*z);
   }
 
-    constructor(...x_y_z){
+    constructor(...xyz){
 
-      this.x1 = x_y_z[0]["x1"]||x_y_z[0][0]||x_y_z[0]||0;
-      this.y1 = x_y_z[0]["y1"]||x_y_z[0][1]||x_y_z[1]||0;
-      this.z1 = x_y_z[0]["z1"]||x_y_z[0][2]||x_y_z[2]||0;
-      this.x2 = x_y_z[0]["x2"]||x_y_z[0][3]||x_y_z[3]||0;
-      this.y2 = x_y_z[0]["y2"]||x_y_z[0][4]||x_y_z[4]||0;
-      this.z2 = x_y_z[0]["z2"]||x_y_z[0][5]||x_y_z[5]||0;
+      this.x1 = xyz[0]["x1"]||xyz[0][0]||xyz[0]||0;
+      this.y1 = xyz[0]["y1"]||xyz[0][1]||xyz[1]||0;
+      this.z1 = xyz[0]["z1"]||xyz[0][2]||xyz[2]||0;
+      this.x2 = xyz[0]["x2"]||xyz[0][3]||xyz[3]||0;
+      this.y2 = xyz[0]["y2"]||xyz[0][4]||xyz[4]||0;
+      this.z2 = xyz[0]["z2"]||xyz[0][5]||xyz[5]||0;
         
       this.__proto__.length = () =>{
         let x = this.x1-this.x2;
