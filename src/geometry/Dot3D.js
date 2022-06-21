@@ -15,8 +15,8 @@ class Dot3D{
         
         this.__proto__.translate = (x=0,y=0,z=0)=>{this.x=x;this.y=y;this.z=z;};
 
-        this.__proto__.add  = (x=0,y=0,z=0) =>{this.x+=x;this.y+=y;this.z+=z;};
-        this.__proto__.sub  = (x=0,y=0,z=0) =>{this.x-=x;this.y-=y;this.z-=z;};
+        this.__proto__.add  = (x=0,y=0,z=0)=>{this.x+=x;this.y+=y;this.z+=z;};
+        this.__proto__.sub  = (x=0,y=0,z=0)=>{this.x-=x;this.y-=y;this.z-=z;};
         this.__proto__.mult = (m=1)=>{this.x*=m;this.y*=m;this.z*=m;};
         this.__ptoto__.div  = (d=1)=>{this.x*=1/d;this.y*=1/d;this.z*=1/d;};
         
