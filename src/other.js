@@ -19,7 +19,7 @@ const matrix2d     =(w,h,r=1,tx=0,ty=0)=>{let d=Math.sqrt(w*w+h*h)||0;
 
 const matrix3d    =(w,h,l,r=1,tx=0,ty=0,tz=0)=>{
     let d=Math.sqrt(w*w+h*h+l*l)||0;
-    return{x:w/d*r+tx||yx,y:h/d*r+ty||ty,z:l/d*r+tz||tz};
+    return{x:w/d*r+tx||tx,y:h/d*r+ty||ty,z:l/d*r+tz||tz};
 };
 
 
