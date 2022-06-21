@@ -7,11 +7,11 @@ class Dot3D{
         return Math.sqrt(x*x+y*y+z*z);
     };
     
-    constructor(...x_y_z){
+    constructor(...xyz){
         
-        this.x = x_y_z[0]["x"]||x_y_z[0][0]||x_y_z[0]||0;
-        this.y = x_y_z[0]["y"]||x_y_z[0][1]||x_y_z[1]||0;
-        this.z = x_y_z[0]["z"]||x_y_z[0][2]||x_y_z[2]||0;
+        this.x = xyz[0]["x"]||xyz[0][0]||xyz[0]||0;
+        this.y = xyz[0]["y"]||xyz[0][1]||xyz[1]||0;
+        this.z = xyz[0]["z"]||xyz[0][2]||xyz[2]||0;
         
         this.__proto__.translate = (x=0,y=0,z=0)=>{this.x=x;this.y=y;this.z=z;};
 
