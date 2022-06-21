@@ -8,11 +8,7 @@ class Vector3D{
   
   static dotProduct(vec_a,vec_b){let x=vec_a.x*vec_b.x||0;let y=vec_a.y*vec_b.y||0;return x+y;};
     
-//  static crossProduct(vec_a,vec_b){return{
-//    x:(vec_a.y*vec_b.z)-(vec_a.z*vec_b.y),
-//    y:(vec_a.z*vec_b.x)-(vec_a.x*vec_b.z),
-//    z:(vec_a.x*vec_b.y)-(vec_a.y*vec_b.x)};
-//    };
+  static crossProduct(vec_a,vec_b){return (vec_a.x*vec_b.y)-(vec_a.y*vec_b.x);};
     
   static unitVector(vec){let length=vec.length();
     return{x:vec.x*(1/length),y:vec.y*(1/length)};
