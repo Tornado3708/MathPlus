@@ -1,14 +1,15 @@
-//const Complex = require("./algebra/Comlex.js");
-const Dot2D  = require("./geometry/Dot2D.js");
-const Dot3D  = require("./geometry/Dot3D.js");
-const Line2D = require("./geometry/Line2D.js");
-const Line3D = require("./geometry/Line3D.js");
-const Matrix = require("./algebra/Matrix.js");
-//const Tensor = require("./algebra/Tensor.js");
-const Triangle2D = require("./geometry/Triangle2D.js");
-const Vector2D = require("./algebra/Vector2D.js");
-const Vector3D = require("./algebra/Vector3D.js");
-const other  = require("./other.js");
+//const Complex     = require("./algebra/Comlex.js");
+const Dot2D       = require("./geometry/Dot2D.js");
+const Dot3D       = require("./geometry/Dot3D.js");
+const Line2D      = require("./geometry/Line2D.js");
+const Line3D      = require("./geometry/Line3D.js");
+const Matrix      = require("./algebra/Matrix.js");
+//const Tensor      = require("./algebra/Tensor.js");
+const Triangle2D  = require("./geometry/Triangle2D.js");
+const Rectangle2D = require("./geometry/Rectangle2D.js");
+const Vector2D    = require("./algebra/Vector2D.js");
+const Vector3D    = require("./algebra/Vector3D.js");
+const other       = require("./other.js");
 
 
 
@@ -70,6 +71,7 @@ module.exports = {
     Line3D,
     Matrix,
     Triangle2D,
+    Rectangle2D,
     Vector2D,
     Vector3D,
     
