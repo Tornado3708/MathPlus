@@ -30,9 +30,7 @@ class Matrix{
               for(let i = 0;i < this.length;i++){
                 for(let j = 0;j < this[0].length;j++){
                   this[i][j]+=arg[i][j];
-                }
-              }
-            }
+                }}}
           }else if(typeof arg === "number"){
             for(let i = 0;i < this.length;i++){
               for(let j = 0;j < this[0].length;j++){
@@ -45,14 +43,56 @@ class Matrix{
         
         this.__proto__.sub  = (number_or_matrix)=>{
           let arg = number_or_matrix;
+          if(arg instanceof Matrix || arg instanceof Array){
+            if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
+              for(let i = 0;i < this.length;i++){
+                for(let j = 0;j < this[0].length;j++){
+                  this[i][j]-=arg[i][j];
+                }}}
+          }else if(typeof arg === "number"){
+            for(let i = 0;i < this.length;i++){
+              for(let j = 0;j < this[0].length;j++){
+                this[i][j]-=arg;
+              }
+            }
+              
+          }
         };
         
         this.__proto__.mult = (number_or_matrix)=>{
-        let arg = number_or_matrix;
+          let arg = number_or_matrix;
+            if(arg instanceof Matrix || arg instanceof Array){
+              if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
+                for(let i = 0;i < this.length;i++){
+                  for(let j = 0;j < this[0].length;j++){
+                    this[i][j]*=arg[i][j];
+                  }}}
+            }else if(typeof arg === "number"){
+              for(let i = 0;i < this.length;i++){
+                for(let j = 0;j < this[0].length;j++){
+                  this[i][j]*=arg;
+              }
+            }
+              
+          }
         };
         
         this.__proto__.div  = (number_or_matrix)=>{
-        let arg = number_or_matrix;
+          let arg = number_or_matrix;
+          if(arg instanceof Matrix || arg instanceof Array){
+            if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
+              for(let i = 0;i < this.length;i++){
+                for(let j = 0;j < this[0].length;j++){
+                  this[i][j]/=arg[i][j];
+                }}}
+          }else if(typeof arg === "number"){
+            for(let i = 0;i < this.length;i++){
+              for(let j = 0;j < this[0].length;j++){
+                this[i][j]/=arg;
+              }
+            }
+              
+          }
         };
         
         this.__proto__.transpose = () =>{
