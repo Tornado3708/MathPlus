@@ -4,10 +4,12 @@ const cycloid = {
 };
 
 
-const cosec        = (x=0)      =>{ return 1/Math.sin(x)   || 0;   };
-const sec          = (x=0)      =>{ return 1/Math.cos(x)   || 0;   };
-const sinc         = (x=0)      =>{ return (Math.sin(x)/x) || 0;   };
-const cosc         = (x=0)      =>{ return (Math.cos(x)/x) || 0;   };
+const cosec        = (x=0)      =>{ return (1/Math.sin(x))           || 0;};
+const sec          = (x=0)      =>{ return (1/Math.cos(x))           || 0;};
+const sinc         = (x=0)      =>{ return (Math.sin(x)/x)           || 0;};
+const cosc         = (x=0)      =>{ return (Math.cos(x)/x)           || 0;};
+const cas          = (x=0)      =>{ return (Math.cos(x)+Math.sin(x)) || 0;};
+//const cis
 const toRadians    = (angle=0)  =>{ return Math.RAD_DEG * angle;   };
 const toAngle      = (radians=0)=>{ return Math.DEG_RAD * radians; };
 
@@ -40,6 +42,7 @@ module.exports = {
     sec,
     sinc,
     cosc,
+    cas,
     toRadians,
     toAngle,
     matrix2d,

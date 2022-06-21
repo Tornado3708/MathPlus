@@ -18,6 +18,7 @@ const cosec      = other.cosec;
 const sec        = other.sec;
 const sinc       = other.sinc;
 const cosc       = other.cosc;
+const cas        = other.cas;
 const toRadians  = other.toRadians;
 const toAngle    = other.toAngle;
 const matrix2d   = other.matrix2d;
@@ -44,6 +45,7 @@ const install = () =>{
     Math.sec        = sec;
     Math.sinc       = sinc;
     Math.cosc       = cosc;
+    Math.cas        = cas;
     Math.toRadians  = toRadians;
     Math.toAngle    = toAngle;
     Math.matrix2d   = matrix2d;
