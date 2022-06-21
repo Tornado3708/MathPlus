@@ -5,7 +5,8 @@ const Line2D = require("./geometry/Line2D.js");
 const Line3D = require("./geometry/Line3D.js");
 const Matrix = require("./algebra/Matrix.js");
 //const Tensor = require("./algebra/Tensor.js");
-const Vector = require("./algebra/Vector.js");
+const Vector2D = require("./algebra/Vector2D.js");
+const Vector3D = require("./algebra/Vector3D.js");
 const other  = require("./other.js");
 
 
@@ -67,7 +68,8 @@ module.exports = {
     Line2D,
     Line3D,
     Matrix,
-    Vector,
+    Vector2D,
+    Vector3D,
     
     cycloid,
     cosec,sec,
