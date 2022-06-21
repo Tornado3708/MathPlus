@@ -1,6 +1,4 @@
-class Triangle2D{
-    x=[];
-    y=[];
+class Triangle2D{x=[];y=[];
     constructor(...xy){
         this.x[0] = xy[0]["x1"]||xy[0][0]||xy[0]||0;
         this.x[1] = xy[0]["x2"]||xy[0][2]||xy[2]||0;
