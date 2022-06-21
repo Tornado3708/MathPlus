@@ -30,8 +30,8 @@ const RAD2DEG      = 0.017453292519943295;
 const DEG2RAD      = 57.29577951308232;
 const SQRT3        = 1.7320508075688772;
 const SQRT5        = 2.23606797749979;
-const FI           = 1.618033988749895;
-const fi           = 0.618033988749895;
+const PHI          = 1.618033988749895;
+const phi          = 0.618033988749895;
 
 
 module.exports = {
