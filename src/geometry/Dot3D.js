@@ -1,4 +1,4 @@
-module.exports = class Dot{
+class Dot3D{
     
     static distance(dot_a,dot_b){
         let x = dot_a.x-dot_b.x;
@@ -22,3 +22,4 @@ module.exports = class Dot{
         
     }
 };
+module.exports = Dot3D;
