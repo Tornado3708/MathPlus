@@ -6,10 +6,10 @@ class Dot2D{
         return Math.sqrt(x*x+y*y);
     };
     
-    constructor(...x_y_z){
+    constructor(...xy){
         
-        this.x = x_y_z[0]["x"]||x_y_z[0][0]||x_y_z[0]||0;
-        this.y = x_y_z[0]["y"]||x_y_z[0][1]||x_y_z[1]||0;
+        this.x = xy[0]["x"]||xy[0][0]||xy[0]||0;
+        this.y = xy[0]["y"]||xy[0][1]||xy[1]||0;
         
         this.__proto__.translate = (x=0,y=0)=>{this.x=x;this.y=y;;};
 
