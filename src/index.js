@@ -1,10 +1,11 @@
-//const Tensor = require("./algebra/Tensor.js");
 //const Complex = require("./algebra/Comlex.js");
-
-const Dot2D    = require("./geometry/Dot2D.js");
-const Dot3D    = require("./geometry/Dot3D.js");
-const Vector = require("./algebra/Vector.js");
+const Dot2D  = require("./geometry/Dot2D.js");
+const Dot3D  = require("./geometry/Dot3D.js");
+const Line2D = require("./geometry/Line2D.js");
+const Line3D = require("./geometry/Line3D.js");
 const Matrix = require("./algebra/Matrix.js");
+//const Tensor = require("./algebra/Tensor.js");
+const Vector = require("./algebra/Vector.js");
 const other  = require("./other.js");
 
 
@@ -61,9 +62,12 @@ module.exports = {
     
     install,
     
-    Dot2D,Dot3D,
-    Vector,
+    Dot2D,
+    Dot3D,
+    Line2D,
+    Line3D,
     Matrix,
+    Vector,
     
     cycloid,
     cosec,sec,
