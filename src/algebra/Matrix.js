@@ -14,6 +14,7 @@ class Matrix{
   };
     
     constructor(array){
+      this.__proto__ = {};
       this.__proto__.length = 0;
       
       for(let x = 0;x < array.length;x++){
