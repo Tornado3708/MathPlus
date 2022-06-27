@@ -1,3 +1,4 @@
+const Circle2D    = require("./geometry/Circle2D.js");
 const Complex     = require("./algebra/Complex.js");
 const Dot2D       = require("./geometry/Dot2D.js");
 const Dot3D       = require("./geometry/Dot3D.js");
@@ -68,6 +69,7 @@ module.exports = {
     
     install,
     
+    Circle2D,
     Complex,
     Dot2D,
     Dot3D,
