@@ -30,12 +30,12 @@ class Matrix{
         if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
           for(let i = 0;i < this.length;i++){
             for(let j = 0;j < this[0].length;j++){
-              this[i][j]+=arg[i][j];
+              this[i][j] += arg[i][j];
             }}}
       }else if(typeof arg === "number"){
         for(let i = 0;i < this.length;i++){
           for(let j = 0;j < this[0].length;j++){
-            this[i][j]+=arg;
+            this[i][j] += arg;
           }
         }
 
@@ -48,12 +48,12 @@ class Matrix{
         if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
           for(let i = 0;i < this.length;i++){
             for(let j = 0;j < this[0].length;j++){
-              this[i][j]-=arg[i][j];
+              this[i][j] -= arg[i][j];
             }}}
       }else if(typeof arg === "number"){
         for(let i = 0;i < this.length;i++){
           for(let j = 0;j < this[0].length;j++){
-            this[i][j]-=arg;
+            this[i][j] -= arg;
           }
         }
 
@@ -66,12 +66,12 @@ class Matrix{
           if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
             for(let i = 0;i < this.length;i++){
               for(let j = 0;j < this[0].length;j++){
-                this[i][j]*=arg[i][j];
+                this[i][j] *= arg[i][j];
               }}}
         }else if(typeof arg === "number"){
           for(let i = 0;i < this.length;i++){
             for(let j = 0;j < this[0].length;j++){
-              this[i][j]*=arg;
+              this[i][j] *= arg;
           }
         }
 
@@ -84,12 +84,12 @@ class Matrix{
         if ((arg.length === this.length)&&(arg[0].length === this[0].length)){
           for(let i = 0;i < this.length;i++){
             for(let j = 0;j < this[0].length;j++){
-              this[i][j]/=arg[i][j];
+              this[i][j] /= arg[i][j];
             }}}
       }else if(typeof arg === "number"){
         for(let i = 0;i < this.length;i++){
           for(let j = 0;j < this[0].length;j++){
-            this[i][j]/=arg;
+            this[i][j] /= arg;
           }
         }
 
