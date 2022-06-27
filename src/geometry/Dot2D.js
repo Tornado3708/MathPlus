@@ -30,7 +30,7 @@ class Dot2D{
       
       this.__ptoto__.div  = (d=1)=>{
         this.x *= 1 / d;
-        this.y *=  1/ d;
+        this.y *= 1 / d;
       };
         
     }
